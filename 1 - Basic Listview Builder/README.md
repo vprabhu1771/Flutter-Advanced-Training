@@ -1,6 +1,6 @@
 # 1 - Basic Listview Builder
 
-# 1 - Folder Setup
+1. Folder Setup
 
 ```
 lib -> models
@@ -12,7 +12,7 @@ lib -> models -> Country.dart
 lib -> screens -> CountryListScreen.dart
 ```
 
-# 2 - `Country.dart`
+2. `Country.dart`
 
 ```
 class Country {
@@ -26,7 +26,7 @@ class Country {
 }
 ```
 
-# 3 - `CountryListScreen.dart`
+3. `CountryListScreen.dart`
 
 ```
 import 'package:flutter/material.dart';
