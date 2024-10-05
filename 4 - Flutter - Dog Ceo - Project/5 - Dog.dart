@@ -1,21 +1,14 @@
-import 'package:flutter/material.dart';
+class Dog {
+  String message;
+  String status;
 
-// Make sure to import your HomeScreen file
-import 'package:flutter_dog_ceo/screens/HomeScreen.dart';
+  Dog({
+    required this.message,
+    required this.status,
+  });
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Dog CEO App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomeScreen(title: 'Dog Images'), // Set your HomeScreen as the home property
-    );
-  }
+  Dog.fromJson(Map<String, dynamic> json)
+      :
+        message = json['message'],
+        status = json['status'];
 }
