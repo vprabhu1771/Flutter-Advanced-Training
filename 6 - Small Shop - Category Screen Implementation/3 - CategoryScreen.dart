@@ -4,7 +4,6 @@ import 'package:http/http.dart' as http;
 
 import '../models/Category.dart';
 import '../util/Constants.dart';
-import 'product/ProductFilterByCategoryScreen.dart';
 
 class CategoryScreen extends StatefulWidget {
 
@@ -50,18 +49,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
       print('Error: $e');
     }
 
-  }
-
-  void navigateToProductScreen(Category selectedCategory) {
-
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => ProductFilterByCategoryScreen(title: selectedCategory.name, category: selectedCategory),
-      ),
-    );
-
-  }
+  }  
 
   Future<void> onRefresh() async {
     await fetchData();
@@ -90,8 +78,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
           itemBuilder: (context, index) {
             return ListTile(
               title: Text(categories[index].name),
-              onTap: () {
-                navigateToProductScreen(categories[index]);
+              onTap: () {                
               },
             );
           },
